@@ -35,4 +35,10 @@ public class InputManager
             }
         }
     }
+
+    public void Clear()
+    {
+        KeyAction = null;
+        MouseAction = null;
+    }
 }
