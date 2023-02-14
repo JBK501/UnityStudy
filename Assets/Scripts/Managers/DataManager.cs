@@ -12,11 +12,11 @@ public interface ILoader<key, Value>
 
 public class DataManager
 {
-    public Dictionary<int, Stat> StatDict { get; private set; } = new Dictionary<int, Stat>();
+    public Dictionary<int, Data.Stat> StatDict { get; private set; } = new Dictionary<int, Data.Stat>();
 
     public void Init()
     {
-        StatDict = LoadJson<StatData, int, Stat>("StatData").MakeDict();
+        StatDict = LoadJson<Data.StatData, int, Data.Stat>("StatData").MakeDict();
     }
 
     // Loader는 Key와 Value를 지니고 있는 ILoader를 반드시 지니고 있어야 한다.

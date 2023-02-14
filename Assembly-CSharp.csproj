@@ -56,6 +56,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Contents\PlayerStat.cs" />
+    <Compile Include="Assets\Scripts\Contents\Stat.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Data\Data.Contents.cs" />
@@ -86,7 +88,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\Resources\Art\Town\Readme.txt" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\Resources\Art\Knight\Shader\pbrDoublesided.shader" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_hair_ds.shader" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_hada.shader" />
     <None Include="Assets\Unity UI Samples\Textures and Sprites\SF UI\Background\LICENSE.txt" />
@@ -96,6 +100,7 @@
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_hada_blend.shader" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_eye.shader" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\Resources\Art\Town\Readme FIRST!.txt" />
     <None Include="Assets\Resources\Art\UnityChan\Shader\Unitychan_chara_eye_blend.shader" />
   </ItemGroup>
   <ItemGroup>

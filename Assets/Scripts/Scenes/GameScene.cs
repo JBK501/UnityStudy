@@ -22,7 +22,7 @@ public class GameScene : BaseScene
 
         Managers.UI.ShowSceneUI<UI_Inven>();
 
-        Dictionary<int,Stat> dict = Managers.Data.StatDict;
+        Dictionary<int, Data.Stat > dict = Managers.Data.StatDict;
 
         //// 4초 후에 폭발한다.
         //co = StartCoroutine("ExplodeAfterSeconds", 4.0f);
