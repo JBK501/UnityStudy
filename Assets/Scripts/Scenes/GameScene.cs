@@ -29,6 +29,8 @@ public class GameScene : BaseScene
 
         //// 맘이 바껴서 2초후에 폭발을 멈춘다.
         //StartCoroutine("CoStopExplode", 2.0f);
+
+        gameObject.GetOrAddComponent<CursorController>();
     }
 
     //IEnumerator CoStopExplode(float seconds)
