@@ -11,6 +11,11 @@ public abstract class UI_Base : MonoBehaviour
 
     public abstract void Init();
 
+    private void Start()
+    {
+        Init();
+    }
+
     // C# 제네릭 사용 -> C++템플릿같음.
     // 원하는 컴포넌트를 찾아서 매핑하기 위해 사용한다.
     protected void Bind<T>(Type type) where T : UnityEngine.Object

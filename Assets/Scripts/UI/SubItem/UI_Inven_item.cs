@@ -13,10 +13,6 @@ public class UI_Inven_item : UI_Base
 
     string _name;
 
-    void Start()
-    {
-        Init();
-    }
 
     public override void Init()
     {

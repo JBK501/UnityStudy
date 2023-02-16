@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\UI\SubItem\UI_Inven_item.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Base.cs" />
     <Compile Include="Assets\Scripts\UI\UI_EventHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\WorldSpace\UI_HPBar.cs" />
     <Compile Include="Assets\Scripts\Utils\Define.cs" />
     <Compile Include="Assets\Scripts\Utils\Extension.cs" />
     <Compile Include="Assets\Scripts\Utils\Util.cs" />
