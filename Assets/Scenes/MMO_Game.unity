@@ -11443,6 +11443,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1742653264}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742693225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 291905179917423126, guid: f27996345fece0349b08b9d72e8e24c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1320962318233526938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1742693229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742693225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9eaad31cd3c3f4e89d4b7ac5bd6b61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destPos: {x: 0, y: 0, z: 0}
+  _state: 2
+  _lockTarget: {fileID: 0}
+  _scanRange: 10
+  _attackRange: 2
 --- !u!1 &1751396504
 GameObject:
   m_ObjectHideFlags: 0
@@ -11555,6 +11578,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UnityChan
       objectReference: {fileID: 0}
+    - target: {fileID: 5960010817088934973, guid: 9290a53762ea4c04fa4d469e630304d0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5960010817089161245, guid: 9290a53762ea4c04fa4d469e630304d0,
         type: 3}
       propertyPath: m_RootOrder
@@ -11620,7 +11648,9 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7819497517698382844, guid: 9290a53762ea4c04fa4d469e630304d0, type: 3}
+    - {fileID: -7354085919155829175, guid: 9290a53762ea4c04fa4d469e630304d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9290a53762ea4c04fa4d469e630304d0, type: 3}
 --- !u!1001 &1771806148
 PrefabInstance:
@@ -14435,7 +14465,7 @@ PrefabInstance:
     - target: {fileID: 291905179917520438, guid: f27996345fece0349b08b9d72e8e24c4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -9.41
       objectReference: {fileID: 0}
     - target: {fileID: 291905179917520438, guid: f27996345fece0349b08b9d72e8e24c4,
         type: 3}
@@ -14477,5 +14507,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: babaecf49b3dd7c4ca65b0dcc0842bfb, type: 2}
+    - target: {fileID: 291905179924717964, guid: f27996345fece0349b08b9d72e8e24c4,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27996345fece0349b08b9d72e8e24c4, type: 3}
