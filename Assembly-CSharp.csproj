@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Contents\PlayerStat.cs" />
+    <Compile Include="Assets\Scripts\Contents\SpawningPool.cs" />
     <Compile Include="Assets\Scripts\Contents\Stat.cs" />
     <Compile Include="Assets\Scripts\Controllers\BaseController.cs" />
     <Compile Include="Assets\Scripts\Controllers\CameraController.cs" />
@@ -64,15 +65,16 @@
     <Compile Include="Assets\Scripts\Controllers\MonsterController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Data\Data.Contents.cs" />
-    <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Contents\GameManagerEx.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\DataManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\Poolable.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\ResourceManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\SceneManagerEx.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Core\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\Managers\Managers.cs" />
-    <Compile Include="Assets\Scripts\Managers\PoolManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\Poolable.cs" />
-    <Compile Include="Assets\Scripts\Managers\ResourceManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\SceneManagerEx.cs" />
-    <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\UI_Manager.cs" />
     <Compile Include="Assets\Scripts\Scenes\BaseScene.cs" />
     <Compile Include="Assets\Scripts\Scenes\GameScene.cs" />
     <Compile Include="Assets\Scripts\Scenes\LoginScene.cs" />

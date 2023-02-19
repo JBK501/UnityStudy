@@ -59,6 +59,7 @@ public class PlayerController : BaseController
 
     public override void Init()
     {
+        WorldObjectType = Define.WorldObject.Player;
         _stat = gameObject.GetComponent<PlayerStat>();
 
         #region [키보드 이동 처리]
@@ -91,7 +92,9 @@ public class PlayerController : BaseController
         }
 
         // 이동한다.
-        Vector3 dir = _destPos - transform.position;  
+        Vector3 dir = _destPos - transform.position;
+        dir.y = 0;
+
         if (dir.magnitude < 0.1f)   // 목적지에 도착했으면
         {
             State = Define.State.Idle;  // 정지 상태로 바꾼다.
@@ -111,11 +114,6 @@ public class PlayerController : BaseController
             transform.position += dir.normalized * moveDist;
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 20 * Time.deltaTime);
         }
-
-        //// 애니메이션 처리
-        //Animator anim = GetComponent<Animator>();
-        //// 현재 게임 상태에 대한 정보를 넘겨준다.
-        //anim.SetFloat("speed", _stat.MoveSpeed);
     }
 
     protected override void UpdateSkill()
@@ -134,12 +132,8 @@ public class PlayerController : BaseController
     {
         if(_lockTarget != null)
         {
-            // TODO
             Stat targetStat = _lockTarget.GetComponent<Stat>();
-            PlayerStat myStat = gameObject.GetComponent<PlayerStat>();
-
-            int damage = Mathf.Max(0, myStat.Attack - targetStat.Defense);
-            targetStat.Hp -= damage;
+            targetStat.OnAttacked(_stat);
         }
 
         if(_stopSkill)

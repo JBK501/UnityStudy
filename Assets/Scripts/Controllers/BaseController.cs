@@ -14,6 +14,8 @@ public abstract class BaseController : MonoBehaviour
     [SerializeField]
     protected GameObject _lockTarget;
 
+    public Define.WorldObject WorldObjectType { get; protected set; } = Define.WorldObject.UnKnown;
+
     // property도 virtual을 사용하여 상속받은 클래스에서 재정의 할 수 있다.
     public virtual Define.State State
     {

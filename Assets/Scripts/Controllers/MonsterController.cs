@@ -15,6 +15,7 @@ public class MonsterController : BaseController
 
     public override void Init()
     {
+        WorldObjectType = Define.WorldObject.Monster;
         _stat = gameObject.GetComponent<Stat>();
 
         // 몬스터 산하에 UI_HPBar컴포넌트가 없다면 
@@ -24,14 +25,15 @@ public class MonsterController : BaseController
 
     protected override void UpdateIdle()
     {
-        Debug.Log("Monster UpdateIdle");
-
         // TODO : 매니저가 생기면 옮길 것
 
         // 플레이어를 찾는다.
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        //GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        GameObject player = Managers.Game.GetPlayer();
         if (player == null) // 플레이어가 없으면
             return; // 계속 기다린다.
+        
 
         // 플레이어와의 거리를 구한다.
         float distance = (player.transform.position - transform.position).magnitude;
@@ -48,7 +50,7 @@ public class MonsterController : BaseController
 
     protected override void UpdateMoving()
     {
-        // 플에이어가 사정거리내로 들어오면 공격한다.
+        // 플레이어가 사정거리내로 들어오면 공격한다.
         if (_lockTarget != null)
         {
             _destPos = _lockTarget.transform.position;
@@ -99,10 +101,7 @@ public class MonsterController : BaseController
         {
             // 체력
             Stat targetStat = _lockTarget.GetComponent<Stat>();
-            Stat myStat = gameObject.GetComponent<Stat>();
-
-            int damage = Mathf.Max(0, myStat.Attack - targetStat.Defense);
-            targetStat.Hp -= damage;
+            targetStat.OnAttacked(_stat);
 
             if(targetStat.Hp > 0)   // 살아있으면
             {

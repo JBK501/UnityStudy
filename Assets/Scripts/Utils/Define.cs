@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Define
 {
+    public enum WorldObject
+    {
+        UnKnown,
+        Player,
+        Monster,
+    }
+
     public enum State
     {
         Die,
